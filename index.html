@@ -1,0 +1,55 @@
+<!--
+
+ACEDEVEL NETWORKS S.R.L.
+COCHABAMBA - BOLIVIA 2017
+
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>RUDORUDE</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0" />
+	<meta name="viewport" content="initial-scale=1.0" />
+	<style>
+		.jugar{font-weight: bolder;text-decoration: none;margin: 100px; font-size: 50px;}
+		#gameDiv{display:none;width:100%;}
+		#congratulaciones{display:none; text-align: center; width:100%}
+		.game{border:0px; margin:0px}
+		#intro{text-align: center}
+		#intro img{width:60%;}
+	</style>
+	<script type="text/javascript" src="js/phaser.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<script>
+	function comenzar(){
+		document.getElementById('intro').style.display = 'none';
+		document.getElementById('gameDiv').style.display = 'block';
+		game.state.start('main');
+	}
+</script>
+
+<body class="game">
+
+	<div id="intro">
+		<h1>RUDORUDE</h1><br />
+		<img src="assets/1.jpg" /> <br />
+		<img src="assets/2.jpg" /> <br />
+		<img src="assets/3.jpg" /> <br />
+		<br />
+		<a href="javascript: void(0);" onclick="comenzar()" class="jugar">Comenzar a Jugar</a>
+		<br /><br />
+	</div>
+	<div id="gameDiv"> </div>
+	<div id="congratulaciones">
+		<H1>FELICIDADES HAS LLEGADO AL COLEGIO</H1>
+		<a href="javascript:void(0);" onclick="location.reload()" class="jugar">Jugar otra vez</a>
+	</div>
+
+
+</body>
+</html>
+
+
