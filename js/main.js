@@ -31,6 +31,7 @@ var mainState = {
 	},
 
 	create: function() {
+		document.getElementById("loadingGame").style.display = 'none';
 		var bloqueSuelo;
 		enemigosDerrotados = 0;
 		//atributos del juego
