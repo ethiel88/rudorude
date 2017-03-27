@@ -22,7 +22,8 @@ var mainState = {
 		game.load.spritesheet('dude', 'assets/arevalo.png', 68.5, 92);
 		game.load.image('fondo', 'assets/cocha.jpg');
 		game.load.image('bloqueSuelo', 'assets/grass.png');
-		game.load.image('reloj', 'assets/reloj.png');
+		//game.load.image('reloj', 'assets/reloj.png');
+		game.load.spritesheet('reloj', 'assets/reloj2.jpg', 70, 70);
 		game.load.spritesheet('perrito', 'assets/DogRun.png', 128.67, 70);
 
 		game.load.audio('jump', 'assets/jump.wav');
@@ -36,7 +37,7 @@ var mainState = {
 		enemigosDerrotados = 0;
 		//atributos del juego
 		this.sizeBloque = 70;
-		this.nivelVelocidad = -250;
+		this.nivelVelocidad = -200;
 		this.alturadude = 92;
 		this.probCliff = 0.4;
 		this.probVertical = 0.4;
@@ -89,6 +90,8 @@ var mainState = {
 		obstaculos.createMultiple(12, 'reloj');
 		obstaculos.setAll('checkWorldBounds', true);
 		obstaculos.setAll('outOfBoundsKill', true);
+		obstaculos.callAll('animations.add', 'animations', 'girar', [0, 6, 1, 7, 2, 4, 3, 5], 5, true);
+		obstaculos.callAll('animations.play', 'animations', 'girar');
 
 
 		//enemigos
